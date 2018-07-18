@@ -5,7 +5,8 @@
                 <h3 class='panel-title'><%= @user.name %></h3>
             </div>
             <div class='panel-body'>
-                <img class='media-object img-rounded img-responsive' src='<%= )ravatar_url(@user,{size:500}) %>' alt=''>
+                <img class='media-object img-rounded img-responsive' src='<%= gravatar_url(@user,{size:500}) %>' alt=''>
+               
             </div>
         </div>
     </aside>
@@ -14,6 +15,6 @@
             <li class='<%='active' if current_page?(user_path(@user)) %>'><%= link_to user_path(@user) do %>Tasklist<span class='badge'><%= @count_tasklists %></span><% end %></li>
             <li><a href='#'>Tasklist<a></li>
         </ul>
-        <%= render 'tasklists/tasklists', tasklists: @tasklists %>
+        
     </div>
 </div>
